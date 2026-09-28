@@ -15,9 +15,6 @@
 <img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv (coming soon)">
 <img src="https://img.shields.io/badge/Checkpoints-coming%20soon-ffcc4d?style=flat-square&logo=huggingface&logoColor=black" alt="Checkpoints (coming soon)">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-1B3A6B?style=flat-square" alt="License: Apache 2.0"></a>
-<img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+">
-<img src="https://img.shields.io/badge/PyTorch-2.6-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch 2.6">
-<img src="https://img.shields.io/badge/Transformers-4.52.4-FFD21E?style=flat-square" alt="Transformers 4.52.4">
 
 </div>
 
