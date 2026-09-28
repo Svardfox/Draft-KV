@@ -29,6 +29,11 @@ under a one-sided guard against harm from mismatched messages.
   **78.04%** at a fixed interface size, and the gains transfer to held-out
   tasks.
 
+## TODO
+
+- [ ] Release trained Draft-KV bridge checkpoints.
+- [ ] Release the arXiv paper.
+
 <p align="center">
   <img src="assets/figure1_information_use_gap.png" alt="Figure 1: The information-use gap in latent communication" width="100%">
 </p>
