@@ -2,7 +2,7 @@
 
 <h1>Draft-KV: Learning Useful Latent Communication Between Language Models</h1>
 
-**Linguan Wu**<sup>1</sup>, **Shichang Meng**<sup>1</sup>, **Tianxiang Jiang**<sup>2</sup>, **Haoyu Yang**<sup>3</sup>, **Peng Zhong**<sup>4</sup>,<br>
+**Linquan Wu**<sup>1</sup>, **Shichang Meng**<sup>1</sup>, **Tianxiang Jiang**<sup>2</sup>, **Haoyu Yang**<sup>3</sup>, **Peng Zhong**<sup>4</sup>,<br>
 **Fengming Zhu**<sup>4</sup>, **Xi Peng**<sup>5</sup>, **Linqi Song**<sup>1</sup>, **Jacky Keung**<sup>1</sup>, **Jingyu Zhang**<sup>6</sup>
 
 <sup>1</sup>City University of Hong Kong &nbsp;
