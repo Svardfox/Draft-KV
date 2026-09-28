@@ -19,8 +19,6 @@
 <img src="https://img.shields.io/badge/PyTorch-2.6-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch 2.6">
 <img src="https://img.shields.io/badge/Transformers-4.52.4-FFD21E?style=flat-square" alt="Transformers 4.52.4">
 
-**Paper** (coming soon) &nbsp;·&nbsp; [**Code**](https://github.com/Svardfox/Draft-KV) &nbsp;·&nbsp; **Checkpoints** (coming soon) &nbsp;·&nbsp; [**BibTeX**](#citation)
-
 </div>
 
 <p align="center">
