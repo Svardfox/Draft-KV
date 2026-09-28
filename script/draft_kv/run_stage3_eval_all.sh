@@ -93,7 +93,14 @@ die() {
   exit 2
 }
 
-[[ -x "$DRAFT_KV_PYTHON" ]] || die "missing Draft-KV Python: $DRAFT_KV_PYTHON"
+# DRAFT_KV_PYTHON may be an executable path or a bare command name on PATH.
+if [[ "$DRAFT_KV_PYTHON" != */* ]]; then
+  resolved_python="$(command -v "$DRAFT_KV_PYTHON" 2>/dev/null || true)"
+  [[ -n "$resolved_python" ]] || die "missing Draft-KV Python on PATH: $DRAFT_KV_PYTHON"
+  DRAFT_KV_PYTHON="$resolved_python"
+fi
+[[ -x "$DRAFT_KV_PYTHON" ]] || die "Draft-KV Python is not executable: $DRAFT_KV_PYTHON"
+export DRAFT_KV_PYTHON
 [[ "$GPU_ID" =~ ^[0-9]+$ ]] || die "invalid GPU id: $GPU_ID"
 [[ -d "$SHARER" ]] || die "missing Sharer model: $SHARER"
 [[ -d "$RECEIVER" ]] || die "missing Receiver model: $RECEIVER"

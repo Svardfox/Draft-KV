@@ -11,6 +11,7 @@
 *.parquet
 *.jsonl
 .coverage
+.coverage.*
 coverage.xml
 
 # Folders

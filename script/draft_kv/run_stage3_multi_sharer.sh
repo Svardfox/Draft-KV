@@ -99,7 +99,13 @@ done
 
 [[ -n "$SHARERS" ]] || die "--sharers is required (use --help)"
 [[ "$GPU_ID" =~ ^[0-9]+$ ]] || die "invalid --gpu-id: $GPU_ID"
-[[ -x "$PYTHON_BIN" ]] || die "missing python: $PYTHON_BIN"
+# PYTHON_BIN may be an executable path or a bare command name on PATH.
+if [[ "$PYTHON_BIN" != */* ]]; then
+  resolved_python="$(command -v "$PYTHON_BIN" 2>/dev/null || true)"
+  [[ -n "$resolved_python" ]] || die "missing python on PATH: $PYTHON_BIN"
+  PYTHON_BIN="$resolved_python"
+fi
+[[ -x "$PYTHON_BIN" ]] || die "python is not executable: $PYTHON_BIN"
 RUN_ROOT="$(realpath -m "$RUN_ROOT")"
 [[ -n "$MATCHED_OUTPUT_ROOT" ]] || MATCHED_OUTPUT_ROOT="$RUN_ROOT/downstream_mc"
 MATCHED_OUTPUT_ROOT="$(realpath -m "$MATCHED_OUTPUT_ROOT")"

@@ -6,8 +6,18 @@ DRAFT_KV_PYTHON="${DRAFT_KV_PYTHON:-python3}"
 HF_ROOT="${HF_HOME:-/workspace/huggingface}"
 GPU_ID="${DRAFT_KV_GPU_ID:-0}"
 
+# DRAFT_KV_PYTHON may be an executable path or a bare command name on PATH.
+if [[ "$DRAFT_KV_PYTHON" != */* ]]; then
+  resolved_python="$(command -v "$DRAFT_KV_PYTHON" 2>/dev/null || true)"
+  if [[ -z "$resolved_python" ]]; then
+    echo "Missing Draft-KV Python on PATH: $DRAFT_KV_PYTHON" >&2
+    exit 2
+  fi
+  DRAFT_KV_PYTHON="$resolved_python"
+fi
+
 if [[ ! -x "$DRAFT_KV_PYTHON" ]]; then
-  echo "Missing Draft-KV Python: $DRAFT_KV_PYTHON" >&2
+  echo "Draft-KV Python is not executable: $DRAFT_KV_PYTHON" >&2
   exit 2
 fi
 

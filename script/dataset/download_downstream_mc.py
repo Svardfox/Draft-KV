@@ -383,9 +383,11 @@ def main() -> None:
     args = parser.parse_args()
     root = Path(args.data_root).resolve()
     cache = Path(args.cache_dir).resolve()
-    expected_prefix = Path("/workspace/datasets")
-    if root != expected_prefix and expected_prefix not in root.parents:
-        raise ValueError(f"--data-root must be under {expected_prefix}")
+    # Any location outside the repository is fine; the point is to keep
+    # multi-gigabyte datasets out of version-controlled directories.
+    repo_root = Path(__file__).resolve().parents[2]
+    if root == repo_root or repo_root in root.parents:
+        raise ValueError(f"--data-root must be outside the repository: {repo_root}")
     root.mkdir(parents=True, exist_ok=True)
     cache.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("HF_HOME", str(cache))

@@ -121,6 +121,12 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# PYTHON_BIN may be an executable path or a bare command name on PATH.
+if [[ "$PYTHON_BIN" != */* ]]; then
+  resolved_python="$(command -v "$PYTHON_BIN" 2>/dev/null || true)"
+  [[ -n "$resolved_python" ]] || die "Python executable not found on PATH: $PYTHON_BIN"
+  PYTHON_BIN="$resolved_python"
+fi
 [[ -x "$PYTHON_BIN" ]] || die "Python executable is not executable: $PYTHON_BIN"
 [[ -f "$OPENHERMES" ]] || die "OpenHermes source does not exist: $OPENHERMES"
 [[ -f "$RECEIVER/config.json" ]] || die "Receiver config is missing: $RECEIVER/config.json"
