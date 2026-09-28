@@ -1,2 +1,2 @@
-"""Model components used by Task-Aligned Draft-KV."""
+"""Model components used by Draft-KV."""
 

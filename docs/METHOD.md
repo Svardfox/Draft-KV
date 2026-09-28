@@ -1,4 +1,4 @@
-# Task-Aligned Draft-KV method
+# Draft-KV method
 
 ## Interface
 

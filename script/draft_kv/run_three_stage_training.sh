@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run the complete three-stage Task-Aligned Draft-KV training pipeline.
+# Run the complete three-stage Draft-KV training pipeline.
 #
 # Stage 1: OpenHermes textual reconstruction (overfit gate + long pilot)
 # Stage 2: OpenHermes answer training with reconstruction replay

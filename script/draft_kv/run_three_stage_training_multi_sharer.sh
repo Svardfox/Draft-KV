@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run the complete three-stage Task-Aligned Draft-KV training pipeline with a
+# Run the complete three-stage Draft-KV training pipeline with a
 # configurable Receiver (default Qwen2.5-0.5B-Instruct) and one of the
 # supported Sharers.
 #

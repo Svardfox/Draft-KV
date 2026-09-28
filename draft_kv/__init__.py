@@ -1,2 +1,2 @@
-"""Task-Aligned Draft-KV latent communication package."""
+"""Draft-KV latent communication package."""
 
