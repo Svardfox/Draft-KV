@@ -12,7 +12,7 @@
 <sup>5</sup>Theory Lab, Huawei &nbsp;
 <sup>6</sup>Hong Kong Metropolitan University
 
-<img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv (coming soon)">
+<a href="https://arxiv.org/abs/2609.34754"><img src="https://img.shields.io/badge/arXiv-2609.34754-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv: 2609.34754"></a>
 <img src="https://img.shields.io/badge/Checkpoints-coming%20soon-ffcc4d?style=flat-square&logo=huggingface&logoColor=black" alt="Checkpoints (coming soon)">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-1B3A6B?style=flat-square" alt="License: Apache 2.0"></a>
 
